@@ -90,6 +90,24 @@ class LinkedList {
         }
         return array;
     }
+
+    reverse(){
+        if(this.length == 1)
+        {
+            return this.head;1
+        }
+        const array = [];
+        let currentNode = this.head;
+        while (currentNode !== null) {
+            array.push(currentNode.value);
+            currentNode = currentNode.next; 
+        }
+        array.reverse();
+        return array;
+
+    }
+
+
 }
 
 // Testing the LinkedList
@@ -102,3 +120,4 @@ myLinkedList.insertNode(2, 30); // Inserting 30 at index 2
 console.log(myLinkedList.printList()); // ['90', '10', '30', '20', '40', '80']
 myLinkedList.remove(3); // Removing the node at index 3
 console.log(myLinkedList.printList()); // ['90', '10', '30', '40', '80']
+console.log(myLinkedList.reverse());
